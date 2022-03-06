@@ -1,2 +1,5 @@
 # parallax_css
-Parallax affect created using only CSS
+Parallax effect created using only CSS
+
+Project site url
+https://parallax-css-22781c.netlify.app/
