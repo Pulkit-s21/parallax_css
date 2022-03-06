@@ -65,7 +65,15 @@ section{
 
 @media (max-width: 600px){
     .title{
-        font-size: 4em;
+        font-size: 5em;
+        color: #fff;
+        text-shadow: 0 0 5px black;
+    }
+}
+
+@media (max-width: 370px){
+    .title{
+        font-size: 3em;
         color: #fff;
         text-shadow: 0 0 5px black;
     }
