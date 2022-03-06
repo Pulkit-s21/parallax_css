@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* This is imp cz we need a container which can act as a scrolling one cz without this the body scrolls..and we add perspective on the scrolling container */
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header{
+    display: flex;
+    transform-style: preserve-3d;
+    z-index: -1;  /* z-index: -1 is imp cz without this the images will scroll over the text and we dont want that */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+/* cz we want the mountains to be further back and scale(2) cz it is twice as back as usual */
+.background{
+    transform: translateZ(-10px) scale(2);
+}
+
+/* cz we want the trees to be infront of mountains and scale(1.5) cz we want it to increase by 50% as it is 50% away from usual */
+.foreground{
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.background,
+.foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* without this the imgs become pixelated and dont look good */
+    z-index: -1;
+}
+
+.title{
+    font-size: 7em;
+    color: #fff;
+    text-shadow: 0 0 5px black;
+}
+
+section{
+    font-size: 2em;
+    padding: 2em;
+    background: #333;
+    color: #fff;
+}
